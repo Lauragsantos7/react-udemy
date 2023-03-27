@@ -8,7 +8,7 @@ export default function Mega() {
 const raffle = () => {
     const numberMin = 1;
     const numberMax = 61;
-    return parseInt(Math.random() * (numberMax - numberMin) + numberMin) ;
+    return parseInt(Math.random() * (numberMax - numberMin) + numberMin);
 }; 
 
 const result = () => {
@@ -16,9 +16,8 @@ const result = () => {
      const totalNumbers = 6;
      while (numbersMega.length < totalNumbers) {
      let numbersSor = raffle();
-     numbersMega.push(numbersSor)
-     setNumbersRaffle(numbersMega.join(' '))
-     console.log('numbersMega:', numbersMega)
+     numbersMega.push(numbersSor);
+     setNumbersRaffle(numbersMega.sort((a, b) => a - b).join(' '));
      } 
 }
   return (
@@ -26,7 +25,6 @@ const result = () => {
 
         <button onClick={ result }>Sortear!</button>
         <p> { numbersRaffle}  </p>
-        {/* falta separar os numeros por vírgula */}
        
     </div>
   )
