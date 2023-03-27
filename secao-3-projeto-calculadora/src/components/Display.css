@@ -1,0 +1,11 @@
+.display {
+    align-items: center;
+    background-color: #0004;
+    display: flex;
+    font-size: 2em;
+    grid-column: span 4; /* display vai ocupar 4 posições */
+    justify-content: right;
+    padding:20px;
+    overflow: hidden; /*para não fazer scroll lateral*/
+
+}
