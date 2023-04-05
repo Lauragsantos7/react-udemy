@@ -60,3 +60,17 @@
 .post-content {
   padding: 30px;
 }
+
+.searchInput {
+  margin-bottom: 30px;
+
+}
+.searchInput p {
+  margin-bottom: 30px;
+}
+
+.text-input {
+  width: 30%;
+  font-size: 15px;
+  padding: 5px 20px;
+}
