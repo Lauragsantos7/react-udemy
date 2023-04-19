@@ -9,7 +9,11 @@ export default class Contador extends Component {
 
     acres = () => {
       const { initialNumber, increment } = this.state;
-      this.setState({ initialNumber: initialNumber + increment})
+      // usar o prevState para garantir que o estado anterior é o correto
+      this.setState((prevState, prevProps) => {
+        return { initialNumber: prevState.initialNumber + increment }
+      },
+      { initialNumber: initialNumber + increment})
     };
 
     // dois jeitos possíveis de fazer a mesma coisa:
